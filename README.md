@@ -1,27 +1,25 @@
-Welcome to the Glitch BETA
-=========================
+# Image Search Microservice for FCC
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+Go to the following url: https://imapi.glitch.me/api/imagesearch/
 
-**Glitch** is the friendly commmunity where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+By adding a search term to the end of the url, you can search google images and be returned a `json` object listing ten search results for that term.
 
-Find out more [about Glitch](https://glitch.com/about).
+If you add an offset query, i.e. `?offest=`, followed by a number, you will get ten results from the list following that offset. So if you wanted results 77 - 87, you would use `?offset=77`.
 
+Finally, you can retrieve the last ten searches by calling the `/api/latest` endpoint
 
-Your Project
-------------
+### Examples
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+:dizzy: Search Term :dizzy:
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+* `https://imapi.glitch.me/api/imagesearch/office%20funny`
 
+:dizzy: Offset :dizzy:
 
-Made by [Fog Creek](https://fogcreek.com/)
--------------------
+* `https://imapi.glitch.me/api/imagesearch/office%20funny?offset=35`
 
-\ ゜o゜)ノ
+:dizzy: Latest :dizzy:
+
+* `https://imapi.glitch.me/api/latest`
+
+Try clicking here to see this api in action: https://imapi.glitch.me/api/imagesearch/office%20funny?offset=14
