@@ -1,0 +1,85 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Search Microservice</title>
+    <meta name="description" content="Image Search Microservice made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      
+      <header>Image Search microservice</header>
+      <section>
+        <h1>
+          How does this work?
+        </h1>
+
+        <ol>
+          <li><p>
+            Call the <span class="code">/api/imagesearch</span> endpoint followed by the name of the term you wish to search for to get image data.
+            </p></li>
+          <li><p>
+            Add an <span class="code">?offset=</span> followed by an integer to get a new page of results.
+            </p></li>
+          <li><p>
+             Call the <span class="code">/api/latest</span> endpoint to view a list of the ten most recent searches.
+            </p></li>
+          <li>
+            <p>
+              For Example:
+            </p>
+            <p>
+              Basic Image Search-&gt;
+            </p>
+            <div>
+
+               <p class="code">
+                 <a href="https://imapi.glitch.me/api/imagesearch/the%20office%20funny">https://imapi.glitch.me/api/imagesearch/the%20office%20funny</a>
+              </p>
+            </div>
+            <p>
+              Image Search w/ Offset Query -&gt;
+            </p>
+            <div> 
+              <p class="code">
+                <a href="https://imapi.glitch.me/api/imagesearch/the%20office%20funny?offset=50">https://imapi.glitch.me/api/imagesearch/the%20office%20funny?offset=50</a>
+              </p>
+            </div>
+            
+            <p>
+              Output Structure -&gt;
+            </p>
+            <p class="code json">
+              { "url": "someURL","snippet": "someHeadline", "thumbnail": "someURL", "context": "someURL" }
+            </p>
+            
+            <p>
+              Latest Searches -&gt;
+            </p>
+            <div>
+               <p class="code">
+                 <a href="https://imapi.glitch.me/api/latest">https://imapi.glitch.me/api/latest</a>
+              </p>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+    </div>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
